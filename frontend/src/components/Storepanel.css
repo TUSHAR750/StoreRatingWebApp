@@ -1,0 +1,104 @@
+/* src/components/StorePanel.css */
+
+.form-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.form-container form input,
+.form-container form textarea,
+.form-container form button {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-container form input:focus,
+.form-container form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-container form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-container form button:hover {
+  background-color: #0056b3;
+}
+
+.store-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.store-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.store-item h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.store-item p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.store-item button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.store-item button:hover {
+  background-color: #0056b3;
+}
+
+.info {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

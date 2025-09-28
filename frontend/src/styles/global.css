@@ -1,0 +1,14 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.header { background: #222; color: white; padding: 10px; }
+.header nav a, .header nav button { color: white; margin-right: 10px; text-decoration: none; }
+.container { padding: 20px; }
+.card { max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 6px; }
+input, textarea { width: 100%; padding: 8px; margin: 8px 0; }
+button { padding: 8px 12px; margin: 4px; }
+.store-list { list-style: none; padding: 0; }
+.store-item { border: 1px solid #eee; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
+.error { color: red; }
+.info { color: green; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 8px; border: 1px solid #ddd; }
+.link-btn { background: none; border: none; color: white; cursor: pointer; }
