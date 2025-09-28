@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../Axios";
-import "../components/Storepanel.css"; // optional: reuse styling for forms
+import "../components/Storepanel.css";
 
 const StorePanel = () => {
   const [form, setForm] = useState({ name: "", email: "", address: "" });

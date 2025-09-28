@@ -17,14 +17,14 @@ const User = require('./user')(sequelize, DataTypes);
 const Store = require('./store')(sequelize, DataTypes);
 const Rating = require('./rating')(sequelize, DataTypes);
 
-// Associations
+
 User.hasMany(Rating, { foreignKey: 'userId' });
 Rating.belongsTo(User, { foreignKey: 'userId' });
 
 Store.hasMany(Rating, { foreignKey: 'storeId' });
 Rating.belongsTo(Store, { foreignKey: 'storeId' });
 
-// Optional: a store may have an owner (user)
+
 User.hasMany(Store, { foreignKey: 'ownerId' });
 Store.belongsTo(User, { foreignKey: 'ownerId', as: 'owner' });
 

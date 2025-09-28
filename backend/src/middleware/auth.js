@@ -13,7 +13,7 @@ module.exports = function auth(requiredRole) {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       req.user = decoded;
 
-      // role can be string or array
+     
       if (requiredRole) {
         if (Array.isArray(requiredRole)) {
           if (!requiredRole.includes(decoded.role)) return res.status(403).json({ message: 'Access denied' });

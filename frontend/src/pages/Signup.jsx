@@ -7,7 +7,7 @@ export default function Signup() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // If already logged in, redirect based on role
+  
   useEffect(() => {
     const userStr = localStorage.getItem('user');
     if (userStr) {
@@ -28,7 +28,7 @@ export default function Signup() {
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
 
-      // redirect based on role
+     
       if (res.data.user.role === 'admin') navigate('/admin');
       else if (res.data.user.role === 'storeowner') navigate('/owner');
       else navigate('/stores');

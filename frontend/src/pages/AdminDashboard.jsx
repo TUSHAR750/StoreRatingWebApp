@@ -8,7 +8,7 @@ export default function AdminDashboard() {
 
   const loadStats = async () => {
     try {
-      const res = await API.get('/users/dashboard'); // admin dashboard
+      const res = await API.get('/users/dashboard'); 
       setStats(res.data);
     } catch (err) { 
       console.error(err); 
@@ -18,7 +18,7 @@ export default function AdminDashboard() {
   const loadUsers = async () => {
     try {
       const res = await API.get('/users'); 
-      // If backend returns array directly
+      
       setUsers(res.data); 
     } catch (err) { 
       console.error(err); 
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
   const loadStores = async () => {
     try {
       const res = await API.get('/stores'); 
-      // If backend returns array with avgRating inside store object
+      
       setStores(res.data); 
     } catch (err) { 
       console.error(err); 

@@ -3,7 +3,7 @@ const router = express.Router();
 const { Rating } = require('../models');
 const auth = require('../middleware/auth');
 
-// Get all ratings of logged-in user
+
 router.get('/my', auth(), async (req, res) => {
   try {
     const ratings = await Rating.findAll({ where: { userId: req.user.id } });
@@ -14,7 +14,7 @@ router.get('/my', auth(), async (req, res) => {
   }
 });
 
-// Rate a store
+
 router.post('/:storeId/rate', auth(), async (req, res) => {
   try {
     const { storeId } = req.params;

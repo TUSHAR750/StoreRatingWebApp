@@ -5,19 +5,19 @@ const { sequelize } = require("./src/models");
 
 const app = express();
 
-// ✅ Enable CORS for React frontend
+
 app.use(
   cors({
-    origin: "http://localhost:3000", // React frontend
+    origin: "http://localhost:3000", 
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-// ✅ Parse incoming JSON
+
 app.use(express.json());
 
-// ✅ Routes
+
 app.use("/api/auth", require("./src/routes/auth"));
 app.use("/api/users", require("./src/routes/users"));
 app.use("/api/stores", require("./src/routes/stores"));

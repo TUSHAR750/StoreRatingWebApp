@@ -1,8 +1,8 @@
 // backend/src/controllers/adminController.js
-const { User } = require('../models'); // Adjust path if needed
+const { User } = require('../models'); 
 const bcrypt = require('bcryptjs');
 
-// Create a new user (admin only)
+
 exports.createUser = async (req, res) => {
   try {
     const { name, email, password, role, address } = req.body;
@@ -11,11 +11,11 @@ exports.createUser = async (req, res) => {
       return res.status(400).json({ message: 'Name, email, password and role are required' });
     }
 
-    // Check if user already exists
+    
     const existing = await User.findOne({ where: { email } });
     if (existing) return res.status(400).json({ message: 'User already exists' });
 
-    // Hash password
+    
     const hashed = await bcrypt.hash(password, 10);
 
     const user = await User.create({
@@ -33,7 +33,7 @@ exports.createUser = async (req, res) => {
   }
 };
 
-// List all users (admin only)
+
 exports.listUsers = async (req, res) => {
   try {
     const users = await User.findAll({
@@ -46,7 +46,7 @@ exports.listUsers = async (req, res) => {
   }
 };
 
-// Admin dashboard stats
+
 exports.adminDashboard = async (req, res) => {
   try {
     const totalUsers = await User.count();
@@ -61,7 +61,7 @@ exports.adminDashboard = async (req, res) => {
   }
 };
 
-// Get single user details (admin only)
+
 exports.getUserDetails = async (req, res) => {
   try {
     const user = await User.findByPk(req.params.id, {

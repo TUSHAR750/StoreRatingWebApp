@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'ratings',
     timestamps: true,
     indexes: [
-      { unique: true, fields: ['userId', 'storeId'] } // user can have only one rating per store
+      { unique: true, fields: ['userId', 'storeId'] } 
     ]
   });
 

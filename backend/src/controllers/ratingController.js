@@ -1,7 +1,7 @@
 // backend/src/controllers/ratingController.js
 const { Rating, User } = require('../models');
 
-// Get ratings for a store (store owner only)
+
 exports.getRatingsForStore = async (req, res) => {
   try {
     const ratings = await Rating.findAll({

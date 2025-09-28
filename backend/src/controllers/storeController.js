@@ -1,8 +1,8 @@
 // backend/src/controllers/storeController.js
 const { Store, Rating, User } = require('../models');
-const { Op } = require('sequelize'); // ✅ Import Op directly from sequelize
+const { Op } = require('sequelize'); 
 
-// List all stores with average rating & user rating
+
 exports.listStores = async (req, res) => {
   try {
     const { name, address } = req.query;
@@ -31,7 +31,7 @@ exports.listStores = async (req, res) => {
   }
 };
 
-// Get single store with ratings
+
 exports.getStore = async (req, res) => {
   try {
     const store = await Store.findByPk(req.params.id, {
@@ -49,7 +49,6 @@ exports.getStore = async (req, res) => {
   }
 };
 
-// Create a store (admin or storeowner)
 exports.createStore = async (req, res) => {
   try {
     const { name, email, address } = req.body;
@@ -61,7 +60,6 @@ exports.createStore = async (req, res) => {
   }
 };
 
-// Get all ratings for a store (store owner)
 exports.getRatingsForStore = async (req, res) => {
   try {
     const storeId = req.params.id;
